@@ -1,0 +1,12 @@
+{
+    "fileheader.Author": "Leo",
+    "fileheader.LastModifiedBy": "Leo",
+    "fileheader.tpl": "/*\r\n * @Author: {author} \r\n * @Date: {createTime} \r\n * @Last Modified by:   {lastModifiedBy} \r\n * @Last Modified time: {updateTime} \r\n */\r\n",
+    "liveSassCompile.settings.savePath": "./dist/css",//指定编译完的css文件路径
+    "liveSassCompile.settings.format": "expanded",//指定编译css的样式类型，有这四种 expanded（默认）, compact, compressed or nested
+    "liveSassCompile.settings.extensionName": ".css",//指定编译完的文件后缀名，.css为普通代码，.min.css为压缩代码
+    "liveSassCompile.settings.excludeFolders": [
+         "**/node_modules/**",//指定忽略的文件
+         ".vscode/**",
+    ]
+}

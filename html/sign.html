@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梅兰商贸</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/sigin.css">
+</head>
+<body>
+<!--导航部分-->
+<div id="top-Navigation">
+    <div class="top-Navigation-con">
+        <div class="fl top-nav-left">您好，欢迎s 到素材网</div>
+        <div id="top-nav-right" class="fr">
+            <a href="">网站导航</a>
+            <a href="">客服中心</a>
+            <a href="">建材服务</a>
+            <a href="">我的收藏</a>
+            <a href="">我的商务室</a>
+            <a href="">素材网首页</a>
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div class="logo clearfix">
+    <div class="top-Navigation-con">
+        <div id="logo-image" class="fl">
+            <img src="../images/1.png" alt="logo">
+        </div>
+        <div id="search" class="fr">
+            <input type="text" placeholder="请输入关键字"><input type="button">
+        </div>
+    </div>
+</div>
+<!--首页主导航-->
+<div id="main-navigation">
+    <div class="main-nav-con top-Navigation-con">
+        <a href="#">首页</a>&nbsp;&nbsp;
+        <a href="#">建筑材料</a>&nbsp;&nbsp;
+        <a href="#">儿童安全座椅</a>&nbsp;&nbsp;
+        <a href="#">工艺美术品</a>&nbsp;&nbsp;
+    </div>
+</div>
+<!--banner-->
+<div class="banner flex top-Navigation-con">
+    <div id="banner-left-con">
+        <p id="banner-left-title">商机市场</p>
+        <div id="banner-left-titleList">
+            <a href="">建筑材料</a>
+            <a href="">儿童安全座椅</a>
+            <a href="">工艺美术品</a>
+            <a href="">建筑材料</a>
+            <a href="">安全座椅</a>
+        </div>
+    </div>
+    <div id="banner-middle-con">
+        <img src="../images/center.png" alt="banner">
+    </div>
+    <div id="banner-right-con">
+        <img src="../images/center-r.png" alt="pro">
+        <img src="../images/center-r2.png" alt="message">
+    </div>
+</div>
+<!--建筑材料-->
+<div id="build">
+    <div class="top-Navigation-con">
+        <p id="build-title">建筑材料</p>
+        <div id="build-content-box">
+            <div id="build-content-left">
+                <div class="flex">
+                    <div class="build-content flex">
+                        <div class="build-left-box">
+                            <div class="build-image-box">
+                                <img src="../images/c1.png" alt="">
+                            </div>
+                            <img class="buy" src="../images/buy.png" alt="">
+                        </div>
+                        <div class="build-right-box">
+                            <p class="build-right-title">好太太晾衣架 铝钛合金 升降双杆</p>
+                            <p class="build-right-pro">自动换挡 安全耐用</p>
+                            <p class="build-right-pro">稳定性好 抗氧化强</p>
+                            <sapn class="build-right-nowPrice">239.00</sapn>
+                            <span class="build-right-oldPrice">¥386.00</span>
+                            <p class="build-right-title">限量<span class="build-right-nowPrice">99</span>件已售出<span
+                                    class="build-right-nowPrice">20</span>件</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="build-content flex">
+                            <div class="build-left-box">
+                                <div class="build-image-box">
+                                    <img src="../images/c1.png" alt="">
+                                </div>
+                                <img class="buy" src="../images/buy.png" alt="">
+                            </div>
+                            <div class="build-right-box">
+                                <p class="build-right-title">好太太晾衣架 铝钛合金 升降双杆</p>
+                                <p class="build-right-pro">自动换挡 安全耐用</p>
+                                <p class="build-right-pro">稳定性好 抗氧化强</p>
+                                <sapn class="build-right-nowPrice">239.00</sapn>
+                                <span class="build-right-oldPrice">¥386.00</span>
+                                <p class="build-right-title">限量<span class="build-right-nowPrice">99</span>件已售出<span
+                                        class="build-right-nowPrice">20</span>件</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="build-content-right">
+               <div><p title="title">建材资讯</p></div>
+                <div>
+                <a>贵阳钢铁市场7月17日价格行情</a>
+                <a>贵阳钢铁市场7月17日价格行情</a>
+                <a>贵阳钢铁市场7月17日价格行情</a>
+                <a>贵阳钢铁市场7月17日价格行情</a>
+                <a>贵阳钢铁市场7月17日价格行情</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        $(function () {
+            $("#search:nth-child(2)").click(function () {
+                alert('点击了搜索');
+            })
+            $('#banner-left-titleList').find('a').click(function (ele) {
+
+                alert(ele.target.textContent);
+            })
+        })
+    </script>
+</body>
+</html>

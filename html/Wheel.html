@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #wrapper {
+            width: 800px;
+            height: 600px;
+            margin: 20px auto;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imgList {
+            width: 4800px;
+            position: absolute;
+            z-index: 5;
+        }
+
+        .imgList > li {
+            float: left;
+            width: 800px;
+            height: 600px;
+        }
+
+        .imgList > li > img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .pre, .next {
+            position: absolute;
+            top: 275px;
+            background: rgba(220, 220, 220, 0.7);
+            padding: 10px 0;
+            z-index: 100;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+        }
+
+        .pre:hover, .next:hover {
+            cursor: pointer;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+
+        .pre {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .dollList {
+            width: 180px;
+            position: absolute;
+            z-index: 10;
+            bottom: 20px;
+            left: 310px;
+        }
+
+        .dollList li {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .dollList li.sec a {
+            background: orange;
+        }
+
+        .dollList li a {
+            width: 15px;
+            height: 15px;
+            background: rgba(230, 230, 230, 0.6);
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div class="container">
+        <ul class="imgList">
+            <li class="li_img"><img src="../images/sea.jpg"/></li>
+            <li class="li_img"><img src="../images/moun.jpg"/></li>
+            <li class="li_img"><img src="../images/bamboo.jpg"/></li>
+            <li class="li_img"><img src="../images/lotusLeaf.jpg"/></li>
+        </ul>
+        <span title="1" class="pre"><</span>
+        <span title="0" class="next">></span>
+        <ul class="dollList">
+            <li class="sec"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    //  let  ul_img = document.getElementsByClassName('ul_img')[0];
+    //  let li_img  = document.getElementsByClassName('li_img');
+    //  let  arrow  = document.getElementsByClassName('arrow');
+    //  let  div_btn = document.getElementsByClassName('div_btn');
+    //  let  count = 0;
+    //  div_btn[0].style.backgroundColor = 'aqua';
+    //  let timer;
+    //  function startWheel() {
+    //      timer = setInterval(function () {
+    //
+    //      },3000);
+    //  }
+    // startWheel();
+
+
+    $(function () {
+        let current = 0;
+        let imgLenth = $('.li_img').length;
+        let timer;
+        $('.pre,.next').hover(function () {
+            clearInterval(timer);
+        }, function () {
+            //移出自动播放轮播
+            changeImage();
+        })
+        $('.imgList').hover(function () {
+            clearInterval(timer);
+        }, function () {
+            //移出自动播放轮播
+            changeImage();
+        })
+        /*按钮点击事件*/
+        $('.pre').click(function () {
+            current = current > 0 ? (--current) : (imgLenth - 1);
+            startWheel(current);
+        })
+        $('.next').click(function () {
+            current = current < (imgLenth - 1) ? (++current) : 0;
+            startWheel(current);
+        })
+      /*原点点击事件*/
+        $('.dollList').find('li').click(function () {
+            clearInterval(timer);
+            let  index = $(this).index();
+            current = index;
+            startWheel(current);
+        })
+        /*自动播放轮播*/
+        function changeImage() {
+            timer = setInterval(function () {
+                if (current < imgLenth - 1) {
+                    current++;
+                } else {
+                    current = 0;
+                }
+                startWheel(current);
+            }, 3000);
+        }
+
+        changeImage();
+
+        function startWheel(num) {
+            let go = num * 800;
+            $(".imgList").animate({ "left" : -go },500);
+            $('.dollList').find('li').removeClass('sec').eq(num).addClass('sec');
+        }
+    })
+      let a =  /\w/ ;
+    let r = new RegExp('\w')
+   let  str="Is this all there is w?";
+
+ console.log(str.match(a));
+    // //跑动的次数
+    // var count = 0;
+    // //动画的执行方向
+    // var isgo = false;
+    // //定义计时器对象
+    // var  timer;
+    //
+    //
+    // window.onload = function() {
+    //     /*获取ul元素*/
+    //     var ul_img = document.getElementsByClassName("ul_img")[0];
+    //     //获取所有的li图片元素
+    //     var li_img = document.getElementsByClassName("li_img");
+    //     //获取控制方向的箭头元素
+    //     var arrow = document.getElementsByClassName("arrow");
+    //     //获取所有按钮元素
+    //     var div_btn = document.getElementsByClassName("div_btn");
+    //     div_btn[0].style.backgroundColor = "aqua";
+    //
+    //
+    //     /*定义计时器，控制图片移动*/
+    //     showtime();
+    //     function showtime() {
+    //         timer = setInterval(function () {
+    //             if (isgo == false) {
+    //                 count++;
+    //                 ul_img.style.transform = "translate(" + -800 * count + "px)";
+    //                 if (count >= li_img.length - 1) {
+    //                     count = li_img.length - 1;
+    //                     isgo = true;
+    //                 }
+    //
+    //             }
+    //             else {
+    //                 count--;
+    //                 ul_img.style.transform = "translate(" + -800 * count + "px)";
+    //                 if (count <= 0) {
+    //                     count = 0;
+    //                     isgo = false;
+    //                 }
+    //             }
+    //
+    //             for (var i = 0; i < div_btn.length; i++) {
+    //                 div_btn[i].style.backgroundColor = "aquamarine";
+    //             }
+    //             div_btn[count].style.backgroundColor = "aqua";
+    //
+    //
+    //         }, 4000)
+    //     }
+    //
+    //     /*鼠标进入左右方向键操作*/
+    //     for (var i = 0; i < arrow.length; i++) {
+    //         //鼠标悬停时
+    //         arrow[i].onmouseover = function () {
+    //             //停止计时器
+    //             clearInterval(timer);
+    //         }
+    //         //鼠标离开时
+    //         arrow[i].onmouseout = function () {
+    //             //添加计时器
+    //             showtime();
+    //         }
+    //         arrow[i].onclick = function () {
+    //             //区分左右
+    //             if (this.title == 0) {
+    //                 count++;
+    //                 if (count > 3) {
+    //                     count = 0;
+    //                 }
+    //             }
+    //             else {
+    //                 count--;
+    //                 if (count < 0) {
+    //                     count = 3;
+    //                 }
+    //             }
+    //
+    //             ul_img.style.transform = "translate(" + -800 * count + "px)";
+    //
+    //
+    //             for (var i = 0; i < div_btn.length; i++) {
+    //                 div_btn[i].style.backgroundColor = "aquamarine";
+    //             }
+    //             div_btn[count].style.backgroundColor = "aqua";
+    //         }
+    //     }
+    //
+    //     //鼠标悬停在底部按钮的操作
+    //     for(var b = 0;b< div_btn.length;b++){
+    //         div_btn[b].index = b;
+    //         div_btn[b].onmouseover = function(){
+    //
+    //             clearInterval(timer);
+    //
+    //             for (var a = 0; a < div_btn.length; a++) {
+    //                 div_btn[a].style.backgroundColor = "aquamarine";
+    //             }
+    //             div_btn[this.index].style.backgroundColor = "aqua";
+    //
+    //             //让count值对应
+    //             //为了控制方向
+    //             if(this.index == 3){
+    //                 isgo = true;
+    //             }
+    //             if(this.index == 0){
+    //                 isgo = false;
+    //             }
+    //
+    //             count = this.index;
+    //             ul_img.style.transform = "translate("+-800*this.index+"px)";
+    //
+    //         }
+    //         div_btn[b].onmouseout = function(){
+    //             //添加计时器
+    //             showtime();
+    //         }
+    //     }
+    // }
+
+</script>
+</body>
+</html>

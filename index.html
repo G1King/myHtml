@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的商铺</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="topNavigation">
+            <span class="topLeft">
+        <a class="backHome" href="#">返回首页</a>
+         <a class="topTitle" href="#">收藏网站</a>
+     </span>
+            <span class="topRight">
+            <span class="topTitle">您好，欢迎光临韩都衣舍</span>
+            <a class="login" href="./html/sign.html">登录</a>
+            <a class="topTitle" href="#">注册</a>
+            <a href="#" class="topTitle">购物车</a>
+            <a href="#" class="topTitle">在线客服</a>
+            <a href="#" class="topTitle">帮助中心</a>
+            <a href="#" class="navtitle" id="nav">网站导航</a>
+            </span>
+
+            <div id="webanv">
+                <div class="webContent">
+                    <div class="content">
+                        <h3 class="redTitle">大家都在买</h3>
+                        <div style="float: left;width: 108px" class="smallContent">
+                            <p>T恤</p>
+                            <p>牛仔裤</p>
+                            <p>卫衣毛衫</p>
+                        </div>
+                        <div style="float: right;width: 108px" class="smallContent">
+                            <p href="">连衣裙</p>
+                            <p href="">毛衫</p>
+                            <p href="">休闲套装</p>
+                        </div>
+
+                    </div>
+                    <div class="content">
+                        <h3>女装Women</h3>
+                    </div>
+                    <div class="content">
+                        <h3>男装Men</h3>
+                    </div>
+                    <div class="content">
+                        <h3>童装Children</h3>
+                    </div>
+                    <div class="content">
+                        <h3>帮助中心Help</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--+++++++++++++++++++++++++搜索+++++++++++++++++++++++++-->
+        <div id="search_box">
+            <div id="search_main_box">
+                <input type="text" id="searchInput"><button id="searchButton">搜索</button>
+
+                <div id="search_class">
+                    <a>
+             韩风童装
+          </a>
+                    <a>
+              精选男装
+          </a>
+                    <a>
+              简约女装
+          </a>
+                    <a>
+              填满女装
+          </a>
+                    <a>
+              时尚妈妈
+          </a>
+                    <a>
+              明星同款
+          </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="subNav">
+            <span>全部商品</span>
+            <div id="mainList">
+
+            </div>
+        </div>
+        <div id="subList"></div>
+
+    </div>
+    <script>
+        $(function() {
+
+            function Noneblock() {
+                this.block = function(ele1, ele2) {
+                    $(ele1).on("mousemove", function() {
+                        $(ele2).css({
+                            "display": "block"
+                        })
+                    });
+                    $(ele1).on("mouseleave", function() {
+                        $(ele2).css({
+                            "display": "none"
+                        })
+                    });
+
+                }
+                this.none = function(node) {
+                    $(node).on("mouseenter", function() {
+                        $(node).css({
+                            "display": "block"
+                        })
+                    })
+                    $(node).on("mouseleave", function() {
+                        $(node).css({
+                            "display": "none"
+                        })
+                    })
+                }
+            }
+
+
+            let _noneblock = new Noneblock();
+            _noneblock.block("#nav", "#webanv");
+            _noneblock.none("#webanv");
+            $('#searchButton').click(function() {
+                alert('s')
+            })
+            $.get('data.json', {}, function(data) {
+                var _data = JSON.stringify(data);
+                console.log(_data);
+            })
+        })
+
+    </script>
+
+
+</body>
+
+</html>

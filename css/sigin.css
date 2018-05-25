@@ -1,0 +1,195 @@
+/*const*/
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.flex{
+    display: flex;
+}
+
+/*顶部导航*/
+#top-Navigation{
+    height: 26px;
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #D8D8D8;
+}
+.top-Navigation-con{
+    width: 970px;
+    margin: 0px auto;
+
+}
+.top-nav-left{
+    height: 26px;
+    line-height: 26px;
+    font-size: 13px;
+}
+#top-nav-right{
+    margin-right: 20px;
+}
+#top-nav-right > a{
+    font-size: 13px;
+    color: red;
+}
+/*搜索*/
+.logo{
+    margin: 10px auto;
+}
+#logo-image{
+    width: 200px;
+    height: 84px;
+}
+#search{
+    width: 528px;
+    height: 40px;
+    border:1px solid #C9C9C9;
+    margin-top: 26px;
+    background: #F4F4F4;
+}
+#search input[type='text'] {
+    width: 419px;
+    height: 28px;
+    border: 1px solid #A6A6A6;
+    margin: 5px 0 5px 4px;
+    vertical-align: top;
+}
+#search input[type='button'] {
+    width: 99px;
+    margin-top: 5px;
+    height: 30px;
+    background: url("../images/serch.png");
+}
+/*主导航*/
+.main-nav-con{
+    margin-top: 10px;
+    height: 25px;
+    border-bottom:2px solid #0266A3;
+
+}
+.main-nav-con  a{
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    color: #0266A3;
+    font-size: 13px;
+}
+.main-nav-con  a:hover{
+    background: #0266A3;
+    color: #fff;
+}
+/*banner*/
+.banner{
+    margin-top: 15px;
+}
+#banner-left-con{
+    background-color: rgb(230,236,244);
+    width: 300px;
+    height: 210px;
+}
+#banner-left-title{
+    margin-top: 0px;
+    padding-left: 20px;
+    line-height: 30px;
+    font-size: 13px;
+    color: #fff;
+    background-color: #306BAE;
+}
+#banner-left-titleList a{
+    display: block;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+#banner-left-titleList a:before{
+    content: url("../images/icon_1.png");
+}
+#banner-middle-con{
+    width: 520px;
+    height: 210px;
+    text-align: center;
+}
+#banner-right-con{
+    text-align: right;
+}
+/*建筑材料*/
+#build{
+    margin-top: 15px;
+}
+#build-title{
+    padding-left: 20px;
+    padding-top: 5px;
+    line-height: 30px;
+    border-top: 2px solid #306BAE;
+    background-color: rgb(230,236,244);
+}
+#build-content-box{
+    display: flex;
+    justify-content: space-between;
+}
+#build-content-left{
+    display: flex;
+    border: 1px solid #999999;
+
+}
+.build-image-box{
+    margin: 15px;
+
+    border: 1px solid #9999;
+}
+.buy{
+    margin-left: 10px;
+}
+.build-right-box{
+    margin-left: 10px;
+}
+.build-right-pro{
+    font-size: 12px;
+    color: #FFB973;
+}
+.build-right-title{
+    font-size: 13px;
+}
+.build-right-nowPrice{
+    font-size: 13px;
+    color: red;
+}
+.build-right-oldPrice{
+    font-size: 12px;
+    text-decoration: line-through;
+}
+#build-content-right{
+
+    border: 1px solid #9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#build-content-right p{
+    font-size: 13px;
+    border-bottom: 1px solid #9999;
+}
+#build-content-right a{
+    display: block;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+
+}

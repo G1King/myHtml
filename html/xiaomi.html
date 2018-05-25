@@ -1,0 +1,566 @@
+<!-- /*
+ * @Author: Leo 
+ * @Date: 2018-05-04 09:20:24 
+ * @Last Modified by:   Leo 
+ * @Last Modified time: 2018-05-04 09:20:24 
+ */ -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>小米官网</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/xiaomi.css">
+    
+</head>
+
+<body>
+    <!--顶部导航-->
+    <div class="site-topbar">
+        <img src="../images/ad.jpg" id="advertising" alt="">
+        <div class="top-container">
+            <div class="top-left-container">
+                <a href="#">小米商城</a>
+                <span class="sep">|</span>
+                <a href="#">MIUI</a>
+                <span class="sep">|</span>
+                <a href="">IoT</a>
+                <span class="sep">|</span>
+                <a href="">云服务</a>
+                <span class="sep">|</span>
+                <a href="">水滴</a>
+                <span class="sep">|</span>
+                <a href="">金融</a>
+                <span class="sep">|</span>
+                <a href="">有品</a>
+                <span class="sep">|</span>
+                <a href="">Select Region</a>
+            </div>
+            <div class="top-right-container">
+                <a href="#">登录</a>
+                <span class="sep">|</span>
+                <a href="#">注册</a>
+                <span class="sep">|</span>
+                <a href="">消息通知</a>
+                <div id="shopCar">
+                    <a href="">购物车(1)</a>
+                    <div id="shopCar-Menu">
+                        购物车中还没有商品,赶紧选购吧!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主导航-->
+    <div class="positionR">
+        <div class="main-nav">
+            <div class="logo">
+                <img src="https://s01.mifile.cn/i/logo.png" alt="logo">
+            </div>
+            <div class="main-nav-content">
+                <ul class="main-nav-list">
+                    <li class="main-nav-category">
+                        <a href="" class="main-category-text">小米手机</a>
+                    </li>
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">红米</a>
+
+                    </li>
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">电视</a>
+
+                    </li>
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">笔记本</a>
+
+                    </li>
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">盒子</a>
+
+                    </li>
+
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">新品</a>
+
+                    </li>
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">路由器</a>
+
+                    </li>
+
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">智能硬件</a>
+
+                    </li>
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">服务</a>
+
+                    </li>
+                    <li class="main-nav-category">
+                        <a href="#" class="main-category-text">社区</a>
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="main-nav-search">
+                <form id="J_searchForm" class="search-form clearfix" action="//search.mi.com/search" method="get">
+                    <input class="search-text" type="search" id="search" name="keyword" autocomplete="off" data-search-config="{'defaultWords':[{'Key':'小米手机6','Rst':29},{'Key':'小米手机5X','Rst':8},{'Key':'红米note&nbsp;4X','Rst':14},{'Key':'红米手机4X','Rst':9},{'Key':'小米Max&nbsp;2','Rst':5},{'Key':'小米电视4C','Rst':2},{'Key':'电视32英寸','Rst':1},{'Key':'笔记本pro','Rst':3},{'Key':'空气净化器','Rst':17},{'Key':'净水器','Rst':9}]}"
+                    />
+                    <input type="submit" class="search-btn" value="&#xe616;" />
+                    <div class="search-hot-words">
+                        <a href="https://item.mi.com/product/10000069.html">小米Note 3</a>
+                        <a href="https://www.mi.com/a/h/5656.html?client_id=180100041086&masid=17409.0344">小米6X 预约</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="main-nav-item-list">
+            <ul class="main-nav-item">
+                <li>
+                    <div class="new-product">新品</div>
+                    <div class="thumpImag">
+                        <a href="http://www.mi.com/max2/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mix2s320-220white.png" alt="">
+                        </a>
+                    </div>
+                    <div class="phone-name">小米MIX2S</div>
+                    <div class="phone-price">3299元</div>
+                </li>
+
+                <li>
+                    <div class="new-product">新品</div>
+                    <div class="thumpImag">
+                        <a href="http://www.mi.com/max2/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mix2320-220.png" alt="">
+                        </a>
+                    </div>
+                    <div class="phone-name">小米MIX 2</div>
+                    <div class="phone-price">3099元</div>
+                </li>
+
+                <li>
+                    <div class="new-product">新品</div>
+                    <div class="thumpImag">
+                        <a href="http://www.mi.com/max2/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/32022012085.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="phone-name">小米6X</div>
+                    <div class="phone-price">1599元</div>
+                </li>
+
+                <li>
+                    <div class="new-product">热卖</div>
+                    <div class="thumpImag">
+                        <a href="http://www.mi.com/max2/">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/note2320x220.png" alt="">
+                        </a>
+                    </div>
+                    <div class="phone-name">小米Note 3</div>
+                    <div class="phone-price">2099元</div>
+                </li>
+
+                <li>
+                    <div class="new-product">热卖</div>
+                    <div class="thumpImag">
+                        <a href="">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/max2_toubu.png" alt="">
+                        </a>
+                    </div>
+                    <div class="phone-name">小米Max 2</div>
+                    <div class="phone-price">2099元</div>
+                </li>
+
+                <li>
+                    <div class="new-product">热卖</div>
+                    <div class="thumpImag">
+                        <a href="">
+                            <img src="https://i1.mifile.cn/f/i/g/2015/5x-2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="phone-name">小米5X</div>
+                    <div class="phone-price">1499元</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--左边导航-->
+
+    <div id="main-left-subNav">
+        <div class="positionR">
+            <div class="left-subNav-container">
+                <div class="left-subNav">
+                    <div class="let-subNav-item">
+                        <a href="">手机 电话卡</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">电视 盒子</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">笔记本</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">智能 家电</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">健康 家居</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">出行 儿童</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">路由器 手机配件</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">移动电源 插线板</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">耳机 音响</a>
+                        <span>></span>
+                    </div>
+                    <div class="let-subNav-item">
+                        <a href="">生活 米兔</a>
+                        <span>></span>
+                    </div>
+                </div>
+                <div class="left-subNav-list-con">
+                    <div class="left-subNav-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--banner-->
+        <div class="main-banner">
+            <ul class="main-banner-images">
+                <li class="li_img">
+                    <img src="https://i1.mifile.cn/a4/xmad_15249078379391_VIhYZ.jpg" alt="">
+                </li>
+                <li class="li_img">
+                    <img src="https://i1.mifile.cn/a4/xmad_15241430560031_DLnhX.jpg" alt="">
+                </li>
+                <li class="li_img">
+                    <img src="https://i1.mifile.cn/a4/xmad_15251540987792_YuAvW.jpg" alt="">
+                </li>
+                <li class="li_img">
+                    <img src="https://i1.mifile.cn/a4/xmad_15210347793926_ZbWUV.jpg" alt="">
+                </li>
+                <li class="li_img">
+                    <img src="https://i1.mifile.cn/a4/xmad_15248221330196_tvCXl.jpg" alt="">
+                </li>
+            </ul>
+            <span title="1" class="pre">
+                <</span>
+                    <span title="0" class="next">></span>
+                    <ul class="dollList">
+                        <li class="sec">
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+    <!-- 选购 企业团购 。。。。。 -->
+    <div class="main-bottom">
+        <ul class="bottom-left">
+            <li>
+                <a class="bottom-left-title">选购手机</a>
+            </li>
+            <li>
+                <a class="bottom-left-title">企业团购</a>
+            </li>
+            <li>
+                <a class="bottom-left-title">F码通道</a>
+            </li>
+            <li>
+                <a class="bottom-left-title">米粉卡</a>
+            </li>
+            <li>
+                <a class="bottom-left-title">以旧换新</a>
+            </li>
+            <li>
+                <a class="bottom-left-title">话费充值</a>
+            </li>
+        </ul>
+        <div class="bottom-right">
+            <img src="https://i1.mifile.cn/a4/xmad_15247405523887_Madyw.jpg" alt="mi">
+            <img src="https://i1.mifile.cn/a4/xmad_15248252106128_BeQXt.jpg" alt="">
+            <img src="https://i1.mifile.cn/a4/517bd60e-9acc-42ca-ae51-df9cd7a5df2d" alt="">
+        </div>
+    </div>
+    <!-- 小米闪购 -->
+    <div class="flash-shop">
+        <div class="shop-head">
+            <h1>小米闪购</h1>
+            <div class="listButton">
+                <span class="shop-pre">
+                    <</span>
+                        <span class="shop-next">></span>
+            </div>
+        </div>
+        <div class="shop-body">
+            <div class="shop-container clearfix">
+                <div class="shopLeft">
+                    <p>距离开始还有</p>
+                    <span class="shopTime">00</span>
+                    <span class="shopTime">:</span>
+                    <span class="shopTime">04</span>
+                    <span>:</span>
+                    <span class="shopTime">00</span>
+                </div>
+                <div class="shopRight">
+                    <ul class="shopList">
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/97a8e6f0-db84-6a6c-c5a5-4014b3f1fac8.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/65956d73-07a6-3d03-67e3-5c546a271b8b.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/97a8e6f0-db84-6a6c-c5a5-4014b3f1fac8.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/97a8e6f0-db84-6a6c-c5a5-4014b3f1fac8.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/b315ba2c-3dc0-1352-3fbf-b23ffad1bb0f.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/b315ba2c-3dc0-1352-3fbf-b23ffad1bb0f.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/b315ba2c-3dc0-1352-3fbf-b23ffad1bb0f.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="shopContent">
+                                <a href="">
+                                    <img class="shop-image" src="https://i8.mifile.cn/v1/a1/b315ba2c-3dc0-1352-3fbf-b23ffad1bb0f.jpg" alt="">
+                                </a>
+                                <h3 class="shop-title">小米MIX 2 6GB+128GB 黑色陶瓷</h3>
+                                <p class="shop-desc">5.99"全面屏，骁龙835处理器</p>
+                                <p class="shop-price">
+                                    <span>2999 元</span>&nbsp;
+                                    <del class="shop-desc">3599元</del>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 闪购结束 -->
+    <div></div>
+    <script>
+        jQuery.foo = function () {
+            alert('this is a test');
+        }
+        $(function () {
+
+            function Noneblock() {
+                this.block = function (ele1, ele2) {
+                    $(ele1).hover(function () {
+                        $(ele2).css({
+                            "display": "block"
+                        })
+                    }, function () {
+                        $(ele2).css({
+                            "display": "none"
+                        })
+                    })
+
+                }
+
+                this.none = function (node) {
+                    $(node).hover(function () {
+                        $(node).css({
+                            "display": "block"
+                        })
+                    }, function () {
+                        $(node).css({
+                            "display": "none"
+                        })
+                    })
+                }
+            }
+
+            let _noneblock = new Noneblock();
+            _noneblock.block("#shopCar > a", "#shopCar-Menu");
+            _noneblock.none("#shopCar-Menu");
+            _noneblock.block(".main-nav-category", ".main-nav-item-list");
+            _noneblock.none(".main-nav-item-list");
+
+            _noneblock.block("#main-left-subNav .positionR", ".left-subNav-list-con");
+            _noneblock.none(".left-subNav-list-con");
+            $('.search-text').focusin(function () {
+                $('.main-nav-search .search-hot-words a').css('display', 'none');
+            })
+
+            $('.search-text').focusout(function (t) {
+                if (t.target.value.length == 0) {
+                    $('.main-nav-search .search-hot-words a').css('display', 'inline-block');
+                }
+            })
+            let html = "";
+            for (let i = 0; i < 18; i++) {
+                html += '<div>' + '<img src="https://i1.mifile.cn/f/i/g/2015/cn-index/5P-320-220.png">' +
+                    '<a href="https://www.mi.com/mix2/">小米Mix 2</a>' + '</div>'
+            }
+            $('.left-subNav-container .left-subNav-list').append(html);
+            // 轮播部分
+
+            let current = 0;
+            let timer;
+            let imgaesLength = $('.li_img').length;
+            $('.pre,.next').hover(function () {
+                clearInterval(timer);
+            }, function () {
+                startWheel();
+            })
+            $('.main-banner-images').hover(function () {
+                clearInterval(timer);
+            }, function () {
+                startWheel();
+            })
+            $('.pre').click(function () {
+                current = current < 0 ? (imgaesLength - 1) : --current;
+                changeToImage(current);
+            })
+            $('.next').click(function () {
+                current = current > (imgaesLength - 1) ? (0) : ++current;
+                changeToImage(current);
+            })
+            $('.dollList').find('li').click(function () {
+                clearInterval(timer);
+                let index = $(this).index();
+                current = index;
+                changeToImage(current);
+            })
+
+            function startWheel() {
+                timer = setInterval(function () {
+                    if (current < imgaesLength - 1) {
+                        current++;
+                    } else {
+                        current = 0;
+                    }
+                    changeToImage(current);
+                }, 3000);
+            }
+
+            startWheel();
+
+            function changeToImage(num) {
+                let len = num * 1000;
+                $('.main-banner-images').animate({
+                    'left': -len
+                }, 1000);
+                $('.dollList').find('li').removeClass('sec').eq(num).addClass('sec');
+            }
+            let length =
+                $('.shop-pre').click(function () {
+                    $('.main-banner-images').animate({
+                        'margin-left': -len
+                    }, 1000);
+                })
+        })
+    </script>
+</body>
+
+</html>
