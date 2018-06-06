@@ -8,5 +8,6 @@
     "liveSassCompile.settings.excludeFolders": [
          "**/node_modules/**",//指定忽略的文件
          ".vscode/**",
-    ]
+    ],
+    "editor.quickSuggestions": true,
 }

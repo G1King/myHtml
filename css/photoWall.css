@@ -1,0 +1,35 @@
+* {
+    margin:  0;
+    padding: 0;
+}
+body {
+    background-color: #7b7b7b;
+}
+.wrapper{
+    margin: 50px auto;
+    width: 70%;
+}
+.imgBox{
+    margin: 50px auto;
+    width: 500px;
+    height: 252px;
+    perspective: 700px;
+    /*  3d 用的 css3 属性 */
+    
+    
+}
+.wrapper img{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.btn{
+    margin: 50px auto;
+    text-align: center;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    color: #ffff;
+    border-radius: 5px;
+}

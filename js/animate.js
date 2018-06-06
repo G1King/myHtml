@@ -5,7 +5,12 @@ $(function () {
            current++;
            if (current > 100) {
                $('.pageLoading').addClass('complete')
-               clearInterval(timer);
+              setTimeout(() => {
+                  $('.monsterText').html('WE<br>ARE<br>SQUARE<br>MONSTER');
+              }, 3000);
+              clearInterval(timer);
            }
+           
        }, 30)
+       
 })
