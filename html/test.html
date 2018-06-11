@@ -89,6 +89,16 @@
             
           $('.g-alert').click(function () {
             
+             $.ajax({
+                 url:'http://192.168.3.40/PHP/index.php',
+                 success:function(result){
+                  let data = JSON.parse(result);
+                  console.log(data);
+                 }
+                 
+             })
+
+
               $(this).alert({
                 'message':"哈哈哈",
                 callBack:function(){

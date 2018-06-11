@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue指令练习 嘻嘻</title>
+    <style>
+        #app {
+            margin: 50px auto;
+            width: 600px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid red;
+        }
+
+        fieldset input {
+            width: 200px;
+            height: 30px;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 600px;
+            border: 2px solid orangered;
+            text-align: center;
+        }
+
+        thead {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <fieldset>
+            <legend>学生录入系统呀😝</legend>
+            <div>
+                <span>姓名:</span>
+                <input type="text" placeholder="请输入姓名" v-model="newStudent.name">
+            </div>
+            <div>
+                <span>年龄:</span>
+                <input type="text" placeholder="请输入年龄" v-model="newStudent.age">
+            </div>
+            <div>
+                <span>性别:</span>
+                <select v-model="newStudent.sex">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+            <div>
+                <span>手机:</span>
+                <input type="text" placeholder="请输入手机号" v-model="newStudent.phone">
+            </div>
+            <button @click="createNewStudent()">创建新用户</button>
+        </fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>年龄</td>
+                    <td>手机</td>
+                    <td>删除</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(p,index) in students">
+                    <td>{{p.name}}</td>
+                    <td>{{p.sex}}</td>
+                    <td>{{p.age}}</td>
+                    <td>{{p.phone}}</td>
+                    <td>
+                        <button @click="deleteStudentMsg(index)">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../../js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                students: [{
+                        name: '张三',
+                        age: 20,
+                        sex: '男',
+                        phone: '18932323232'
+                    },
+                    {
+                        name: '李四',
+                        age: 30,
+                        sex: '男',
+                        phone: '18921212122'
+                    },
+                    {
+                        name: '王五',
+                        age: 20,
+                        sex: '男',
+                        phone: '18932223232'
+                    },
+                    {
+                        name: '赵六',
+                        age: 25,
+                        sex: '女',
+                        phone: '18932322232'
+                    },
+                ],
+                newStudent: {
+                    name: '',
+                    age: 0,
+                    sex: '男',
+                    phone: ''
+                }
+
+            },
+            methods: {
+                createNewStudent() {
+                    if (this.detection()) {
+                        this.students.unshift(this.newStudent);
+                        this.newStudent = {
+                            name: '',
+                            age: 0,
+                            sex: '男',
+                            phone: ''
+                        }
+                    }
+                },
+                deleteStudentMsg(index) {
+                    this.students.splice(index, 1);
+                },
+                detection() {
+                    if (this.newStudent.name === "") {
+                        alert('名字不能为空');
+                        return false;
+                    }
+                    if (this.newStudent.age <= 0) {
+                        alert('年龄不能小于0');
+                        return false;
+                    }
+                    if (this.newStudent.phone === '' && this.newStudent.phone.length != 11) {
+                        alert('手机号不正确');
+                        return false;
+                    }
+                    return true;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
