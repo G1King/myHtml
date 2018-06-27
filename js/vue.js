@@ -4040,7 +4040,7 @@ function bindObjectProps (
   return data
 }
 
-/*  */
+/*  */  
 
 /**
  * Runtime helper for rendering static trees.

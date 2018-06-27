@@ -1,0 +1,132 @@
+/*
+ * address:'leader '
+ * author:'Zach1991'
+ * e-mil:'446562358@qq.com'
+ * data:'2018-01-18'
+ */
+/*reset styles*/
+*{-webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color:transparent;}
+/*coded format*/
+@charset "utf-8";body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin: 0;padding: 0;}
+body {overflow-x: hidden;font-family: "Microsoft YaHei", "arial";max-width: 7.5rem;margin: 0 auto;   /*-webkit-overflow-scrolling: touch;overflow-scrolling: touch;*/}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+li {list-style: none;}
+img {border: none;}
+i {font-style: normal;}
+input,select,textarea {outline: none;border: none;background: none;border-radius: 0;-webkit-border-radius: 0; background-image: -webkit-linear-gradient(transparent, transparent);background-image: -moz-linear-gradient(transparent, transparent);background-image: -o-linear-gradient(transparent, transparent);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(transparent));background-image: linear-gradient(transparent, transparent);}
+textarea {resize: none;}
+html {-webkit-text-size-adjust: none;overflow-x: hidden;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display: block;}
+img {height: auto;width: auto\9;/* ie8 */vertical-align: top;}
+.video embed,.video object,.video iframe {width: 100%;height: auto;}
+a {border: 0;text-decoration: none;outline: none;}
+a,button,input {-webkit-tap-highlight-color: rgba(255, 0, 0, 0);}
+em {font-style: normal;}
+/* ========================================================== */
+/* 
+  *clear,float,padding,margin,text-align,text-indent,display,background*
+*/
+/*clear floating*/
+.clearBox:after {content: ".";clear: both;display: block;overflow: hidden;font-size: 0;height: 0;}
+.clearBox {zoom: 1;}
+
+/* float */
+.fl{float: left;}
+.fr{float: right;}
+
+/* padding */
+.pad-top10{padding-top: 0.1rem;}
+.pad-top15{padding-top:0.15rem;}
+.pad-top20{padding-top: 0.2rem;}
+.pad-bottom15{padding-bottom: 0.15rem;}
+.pad-bottom20{padding-bottom: 0.2rem;}
+.pad-left30{padding-left: 0.3rem;}
+.pad-right30{padding-right: 0.3rem;}
+
+/* margin */
+.ma{margin: 0 auto;}
+.ma-top0{margin-top: 0;}
+.ma-left30 {margin-left: 0.3rem;}
+.ma-top25{margin-top: 0.25rem;}
+.ma-top60{margin-top: 0.6rem;}
+
+/* text-align */
+.tl{text-align: left;}
+.tr{text-align: right;}
+.tc{text-align: center;}
+.tj{text-align: justify;}
+
+/* text-indent */
+.text-ind{text-indent: 0.1rem;}
+.text-ind30 {text-indent: 0.3rem;}
+.text-ind60{text-indent: 0.6rem;}
+
+/* display */
+.dis-n{display: none;}
+.dis-b{display: block;}
+.dis-i{display: inline-block;}
+
+/* background */
+.bg-e4{background:#e4e4e4;}
+.bg-box {background: #F6FBFF;}
+.bg-fff{background: #fff;}
+.bg-red{background: red;}
+.bg-green{background: green;}
+.bg-yellow{background:yellow;}
+.bg-f6{background: #f6f6f6;}
+
+/* border */
+.borderBox{border:1px solid #E4E4E4;}
+
+/* color */
+.col-box{color:#2E74B0;}
+.col-red{color: red;}
+.col-fff{color:#fff;}
+.col-333{color:#333;}
+.col-999{color:#999;}
+
+/* font-size */
+.fs20{font-size: 0.2rem;}
+.fs22{font-size: 0.22rem;}
+.fs24{font-size: 0.24rem;}
+.fs26 {font-size: 0.26rem;}
+.fs28{font-size: 0.28rem;}
+.fs30{font-size: 0.3rem;}
+.fs32{font-size: 0.32rem;}
+.fs34{font-size: 0.34rem;}
+.fs36{font-size: 0.36rem;}
+
+
+/* position */
+.pf{position: fixed;}
+.pa{position: absolute;}
+.pr{position: relative;}
+
+/* lin */
+.lh38{line-height: 0.38rem;}
+.lh40{line-height: 0.4rem;}
+.lh42{line-height: 0.42rem;}
+.lh60{line-height: 0.6rem;}
+.lh70{line-height: 0.7rem;}
+.lh80{line-height: 0.8rem;}
+.lh90{line-height: 0.9rem;}
+
+/* hint language */
+.hintBox{width:7.5rem;top:50%;left:50%;transform: translateY(-50%);margin-left:-3.75rem;z-index:108;}
+.hintBox span{padding:0.1rem;background:rgba(25,25,25,0.7);border-radius: 0.25rem;}
+
+/* separate */
+.separate{display:block;width:100%;height: 0.1rem;background: #f6f6f6;border-top:1px solid #e4e4e4;border-bottom: 1px solid #e4e4e4;}
+
+/* vue page */
+[v-cloak] {display: none}
+
+/* text overflow */
+.p-two{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.p-three{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;}
+.p-one {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/* clear */
+.clearfix::after {content: ".";clear: both;display: block;overflow: hidden;font-size: 0;height: 0;
+}
+.clearfix {zoom: 1;}

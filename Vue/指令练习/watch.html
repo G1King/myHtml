@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>watch</title>
+</head>
+<body>
+<div id="app">
+    <img v-bind:src="imageUrl" alt="暂无">
+    <p v-on:mouseenter.prevent="onSub">电网啊</p>
+</div>
+
+<script src="../../js/vue.js"></script>
+<script>
+ /*
+<!-- 阻止单击事件冒泡 -->
+
+<a v-on:click.stop="doThis"></a>
+
+
+<!-- 提交事件不再重载页面 -->
+<form v-on:submit.prevent="onSubmit"></form>
+
+
+<!-- 修饰符可以串联 -->
+<a v-on:click.stop.prevent="doThat">
+
+
+    <!-- 只有修饰符 -->
+    <form v-on:submit.prevent></form>*/
+    let vm = new Vue({
+        el:"#app",
+        data:{
+    imageUrl: "../../images/1.png"
+        },
+       methods:{
+           onSub(){
+               alert('我')
+           },
+           preventDefault(){
+               alert('ss ')
+           }
+       }
+    })
+  vm.imageUrl = "../../images/8.jpg";//改变值后  watch 监听到 imageUrl的变化  会执行 回调函数
+ vm.$watch('imageUrl',function (newValue,oldValue) {
+     console.log(newValue,oldValue);
+ })
+</script>
+</body>
+</html>

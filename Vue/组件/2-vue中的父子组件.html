@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <div id="app">
+      <parent></parent>
+      <child></child>
+  </div>
+     
+<script src="../../js/vue.js"></script>
+<script>
+    //子组件构造器
+ let child1 = Vue.extend({ template:`
+<img src="../../images/1.png" width="200px">` }) ;
+let child2 = Vue.extend({ template:`
+<p>我认为我很迷人啊</p>` }) ;
+Vue.component('child',child1);
+//父组件构造器
+Vue.component('parent',{
+    components:{
+        'my-child1':child1,
+        'my-child2':child2
+    },
+    template:`<div>
+     <my-child1></my-child1>
+    <my-child2></my-child2>
+     </div>`
+})
+new Vue({
+    el:'#app'
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{fullName}}</p>
+        <button @click="deal()">调用计算属性的setter</button>
+    </div>
+<script src="../../js/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            firstName: 'zhang',
+            lastName: 'sanfeng'
+        },
+        methods:{
+            deal(){
+                  this.fullName = "My Leo"   
+            }
+        },
+        computed:{
+            //get 方法 只有get 是 可以这样写
+            // fullName(){
+
+            // }
+           
+            fullName:{
+               get(){
+                   return this.firstName + ' ' + this.lastName
+               },
+               set(str){
+                  let newName = str.split(' ');
+                  this.firstName = newName[0];
+                  this.lastName = newName[1];
+               }
+            }
+        }
+    })
+</script>
+</body>
+</html>

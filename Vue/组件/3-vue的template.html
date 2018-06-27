@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>v-bind</title>
+    <title>vue中的template标签</title>
 </head>
 <body>
     <div id="app">
-        <img v-bind:src="imageUrl" alt="暂无">
+        <my-div></my-div>
     </div>
+ <template id = "my-div">
+     <div>
+         <div>我是Leo</div>
+         <input type="date">
+         <img src="../../images/5.jpg" alt="" width="400">
+     </div>
+ </template>
+
 
 <script src="../../js/vue.js"></script>
 <script>
-   let vm = new Vue({
-        el:"#app",
-        data:{
-    imageUrl: "../../images/1.png"
-        }
+    Vue.component('my-div',{
+        template:'#my-div'
     })
-    
- vm.$watch('imageUrl',function (newValue,oldValue) {
-     console.log(newValue,oldValue);
- })
 </script>
 </body>
 </html>
