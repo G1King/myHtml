@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue的solt默认情况</title>
+</head>
+<body>
+<div id="app">
+    <children>
+        <span>12345</span>
+        <!-- span的内容不会显示出来 -->
+    </children>
+    
+</div>
+<script src="../../js/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+ components:{
+            children:{
+                template:  "<button>为了明确作用范围，所以使用button标签</button>"  
+            }
+        }
+    })
+</script>
+</body>
+</html>

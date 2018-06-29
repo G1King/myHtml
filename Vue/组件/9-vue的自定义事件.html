@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue的自定义事件</title>
+</head>
+
+<body>
+    <div id="app">
+        <my-button @total="allcounter()"></my-button>
+        <my-button @total="allcounter()"></my-button>
+        <my-button @total="allcounter()"></my-button>
+        <my-button @total="allcounter()"></my-button>
+        <my-button @total="allcounter()"></my-button>
+        <p>一共点击了{{totalcounter}}次</p>
+    </div>
+
+     <template id="my_button">
+         <button @click="total()">点击了{{counter}}次</button>
+     </template>
+    <script src="../../js/vue.js"></script>
+    <script>
+        Vue.component('my-button',{
+            template:'#my_button',
+            data(){
+                return {
+                    counter: 0
+                }
+            },
+            methods:{
+               total(){
+                   this.counter += 1;
+                   this.$emit('total');
+               }
+            }
+        })
+        new Vue({
+            el:'#app',
+            data:{
+ totalcounter:0
+            },
+            methods:{
+                allcounter(){
+ this.totalcounter += 1;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

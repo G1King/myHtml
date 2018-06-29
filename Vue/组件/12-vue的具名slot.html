@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue的具名slot</title>
+</head>
+<body>
+    <div id="app">
+        <children>
+            <span slot="first">123456</span>
+            <span slot="two">78910</span>
+        </children>
+    </div>
+    <template id="tep">
+<button>
+    <slot name="first"></slot>为了明确作用范围。
+    <slot name="two"></slot>所以用button标签</button>
+    </template>
+<script src="../../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+         components:{
+             children:{
+                 template:'#tep'
+             }
+         }
+    })
+</script>
+</body>
+</html>

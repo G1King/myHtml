@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue-router的用法1</title>
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body{
+        background-color: #e8e8e8;
+    }
+</style>
+</head>
+<body>
+<div id="app">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="page-header">
+                <h1>IT666</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-xs-offset-2">
+            <div class="list-group">
+                <router-link class="list-group-item" to="/h5">HTML5学院</router-link>
+                <router-link class="list-group-item" to="/java">java学院</router-link>
+                <router-link class="list-group-item" to="/python">python学院</router-link>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="panel">
+                <div class="panel-body">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<template id="h5">
+    <div>
+        <h2>HTML5学院</h2>
+        <p>掌握面向未来的神技</p>
+        <img src="../../images/h5.jpg" alt="" width="250px">
+        <div>
+            <ul class="nav nav-tabs">
+             <router-link to="/h5/basic">基础班</router-link>
+             <router-link to="/h5/big">大神班</router-link>
+            </ul>
+            <div class="tab-content">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="basic">
+    <div>
+        <h3>基础班</h3>
+        <p>快速入门HTML5的学习!</p>
+        <img src="../../images/h5.jpg" alt="" width="150">
+    </div>
+</template>
+
+<template id="big">
+    <div>
+        <h3>大神班</h3>
+        <p>精通HTML5的学习!</p>
+        <img src="../../images/img_02.jpg" alt="" width="150">
+    </div>
+</template>
+
+<template id="java">
+    <div>
+        <h2>java学院</h2>
+        <p>都说java是好</p>
+        <img src="../../images/java.jpg" alt="" width="250">
+    </div>
+</template>
+<template id="python">
+    <div>
+        <h2>python学院</h2>
+        <p>python好火啊</p>
+        <img src="../../images/python.jpg" alt="" width="250">
+    </div>
+</template>
+<script src="../../js/vue.js"></script>
+<script src="../../js/vue-router.js"></script>
+<script>
+    const H5 = Vue.extend({
+        template:'#h5'
+    })
+    const basic = Vue.extend({
+        template:'#basic'
+    })
+ const big = Vue.extend({ template:'#big' })
+ const JAVA = Vue.extend({
+      template:'#java'
+     })
+ const PYTHON = Vue.extend({ 
+     template:'#python' 
+    })
+ const routes = [
+     {path:'/h5',
+     name:'h5',
+     children:[{path:'basic',component:basic},{path:'big',component:big},{path:'/',redirect:'basic'}],
+     component: H5},
+     {path:'/java',component:JAVA},
+     {path:'/python',component:PYTHON},
+     {path:'/',redirect:'/h5'}
+    ];
+  const router = new VueRouter({
+      routes
+  })
+  new Vue({
+      router
+  }).$mount('#app')
+
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slot的分发作用域</title>
+</head>
+
+<body>
+    <!-- 父组件模板的内容在父组件作用域内编译，子组件模板的内容在子组件作用域内编译 -->
+    <div id="app">
+        <children>
+            <span slot="first" @click="show">12346</span>
+            <span slot="second">7890</span>
+        </children>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            methods:{
+               show:function(){
+                   alert('ss');
+               } 
+            },
+            components:{
+                children:{
+                    template:`<button><slot name="first"></slot>。<slot></slot>所以用button标签</button>`
+                    
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
