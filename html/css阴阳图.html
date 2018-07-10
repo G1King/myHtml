@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阴阳图</title>
+    <style>
+     .container{
+       position: relative;
+       margin: 10% auto;
+       width: 400px;
+       height: 400px;  
+       animation: roate infinite linear 5s;
+     }
+     .rect{
+       width: 400px;
+       height: 200px;
+       border: 1px #d2d2d2 solid;
+       border-bottom: none;
+     }
+     .rect-one{
+         border-radius:200px 200px 0 0;
+         background: white;
+     }
+      .rect-two{
+         border-radius:0 0 200px 200px;
+         background: black;
+     }
+ .circle{
+     position: absolute;
+     width: 200px;
+     height: 200px;
+     border-radius: 200px;
+ }
+ .white-one{
+     bottom: 100px;
+     right: 0;
+     background: white;
+ }
+ .black-one{
+  bottom:100px;;
+     background-color: black;
+ }
+.dot{
+    position: absolute;
+    margin:auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.dot-black{
+    background-color: white;
+}
+.dot-white{
+    background-color: black;
+}
+      @keyframes roate {
+         form{
+             transform: rotate(0deg)
+         }
+         to{
+             transform: rotate(360deg)
+         }
+     } 
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="rect-one rect">
+            <div class="circle black-one">
+                <div class="dot dot-black"></div>
+            </div>
+        </div>
+<div class="rect-two rect">
+    <div class="circle white-one">
+        <div class="dot dot-white"></div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
